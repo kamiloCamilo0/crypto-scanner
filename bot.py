@@ -8,7 +8,7 @@ API = "https://data-api.binance.vision/api/v3"
 
 MIN_VOLUME = 10_000_000
 TOP_N = 40
-MIN_SCORE = 3
+MIN_SCORE = 2
 MAX_ALERTS = 5
 STABLES = {"USDC", "FDUSD", "TUSD", "USDP", "DAI", "EUR", "BUSD", "USDE", "XUSD", "AEUR"}
 
