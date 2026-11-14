@@ -10,7 +10,7 @@ TG = f"https://api.telegram.org/bot{TOKEN}"
 STATE_FILE = os.environ.get("STATE_FILE", "state.json")
 
 MIN_VOLUME = 10_000_000                              # أقل حجم تداول يومي بالدولار
-TOP_N = 40                                           # عدد العملات المفحوصة
+TOP_N = 70                                           # عدد العملات المفحوصة
 MAX_ALERTS = 6                                       # أقصى إشارات في التشغيلة
 MIN_SCORE = int(os.environ.get("MIN_SCORE", "4"))    # أقل درجة للإرسال
 FRESH_MS = 25 * 60 * 1000                            # الشمعة تُعتبر جديدة 25 دقيقة بعد إغلاقها
