@@ -2,8 +2,16 @@ name: Crypto Scanner
 
 on:
   schedule:
-    - cron: "5 * * * *"
+    - cron: "2-59/15 * * * *"   # كل 15 دقيقة
+    - cron: "7 7 * * *"         # ملخص يومي 7:07 UTC
   workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: scanner
+  cancel-in-progress: false
 
 jobs:
   scan:
@@ -22,3 +30,12 @@ jobs:
         env:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           CHAT_ID: ${{ secrets.CHAT_ID }}
+          SCHEDULE: ${{ github.event.schedule }}
+
+      - name: Save state
+        if: always()
+        run: |
+          git config user.name "radar-bot"
+          git config user.email "radar-bot@users.noreply.github.com"
+          git add state.json || true
+          git diff --cached --quiet || (git commit -m "update state" && git push)
