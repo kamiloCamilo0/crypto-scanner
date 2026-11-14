@@ -13,10 +13,18 @@
    "t2": 0.0033435714285714284,
    "t": 1794661301937,
    "t0": 1794661200000,
-   "checked": 0,
+   "checked": 1794661200000,
    "t1hit": false,
-   "status": "open"
+   "status": "closed",
+   "result": "loss"
   }
  ],
- "stats": {}
+ "stats": {
+  "1h": {
+   "win2": 0,
+   "win1": 0,
+   "loss": 1,
+   "expired": 0
+  }
+ }
 }
