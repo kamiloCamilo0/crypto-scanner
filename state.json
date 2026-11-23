@@ -1,5 +1,7 @@
 {
- "sent": {},
+ "sent": {
+  "MMTUSDT|1h|1795424400000": 1795428132886
+ },
  "trades": [
   {
    "id": "SOPHUSDT|1h|1794657600000",
@@ -75,6 +77,20 @@
    "t1hit": false,
    "status": "closed",
    "result": "loss"
+  },
+  {
+   "id": "MMTUSDT|1h|1795424400000",
+   "sym": "MMTUSDT",
+   "tf": "1h",
+   "entry": 0.2206,
+   "stop": 0.21242499999999997,
+   "t1": 0.2328625,
+   "t2": 0.24512499999999998,
+   "t": 1795428132886,
+   "t0": 1795428000000,
+   "checked": 0,
+   "t1hit": false,
+   "status": "open"
   }
  ],
  "stats": {
